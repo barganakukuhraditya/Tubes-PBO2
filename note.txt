@@ -1,0 +1,19 @@
+TUBES PBO
+
+Database
+=> t_reservasi
+PK	id_cust [AI]
+	nama
+	email
+	nohp
+	tipe_kamar
+	checkin
+	checkout
+	harga
+
+=> t_transaksi
+PK	id_transaksi [AI]
+	id_cust
+	qty
+	total
+

@@ -1,0 +1,25 @@
+3 Form
+
+kamar
+id_kamar
+tipe_kamar
+harga
+status (terisi/belum)
+
+tipe kamar
+id_tipekamar
+nama_tipekamar	
+
+Data Master
++ data kamar
++ tipe kamar
+
+tombol logout = balik ke login
+
+id_customer = id_reservasi
+tipe_kamar = kamar
+harga = total_harga
+
+JOIN
+tipe kamar - kamar
+kamar - reservasi
