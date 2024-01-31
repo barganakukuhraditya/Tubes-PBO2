@@ -53,12 +53,13 @@ namespace TB_714220013_714220048
         public void GetTipeKamar()
         {
             koneksi.OpenConnection();
-            MySqlDataReader reader = koneksi.reader("SELECT tipe_kamar FROM tipe_kamar WHERE id_tipekamar = '" + cbKamar.Text + "'");
+            MySqlDataReader reader = koneksi.reader("SELECT tipe_kamar.tipe_kamar, kamar.harga FROM kamar JOIN tipe_kamar ON tipe_kamar.id_tipekamar = kamar.id_tipekamar WHERE kamar.kamar = '" + cbKamar.Text + "'");
             if (reader.HasRows)
             {
                 while (reader.Read())
                 {
                     tbTipe.Text = reader.GetString(0);
+                    tbHarga.Text = reader.GetString(1);
                 }
             }
             reader.Close();
@@ -205,6 +206,64 @@ namespace TB_714220013_714220048
         private void cbKamar_SelectedIndexChanged(object sender, EventArgs e)
         {
             GetTipeKamar();
+        }
+
+        private void dateCheckout_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime checkinDate = dateCheckin.Value;
+            DateTime checkoutDate = dateCheckout.Value;
+
+            TimeSpan selisih = checkoutDate.Subtract(checkinDate);
+            int selisihHari = (int)selisih.TotalDays;
+
+            if (int.TryParse(tbHarga.Text, out int harga))
+            {
+                int hasilPerhitungan = selisihHari * harga;
+                tbTotal.Text = hasilPerhitungan.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Format harga tidak valid.");
+            }
+        }
+
+        private void FormatDigit(TextBox textBox)
+        {
+            if (!string.IsNullOrEmpty(textBox.Text) && textBox.Text.All(char.IsDigit))
+            {
+                string number = textBox.Text.Replace(".", "");
+
+                number = string.Format("{0:#,##0}", double.Parse(number));
+
+                textBox.Text = number;
+                textBox.SelectionStart = textBox.Text.Length;
+            }
+        }
+
+        private string FormatDigitAngka(int number)
+        {
+            return string.Format("Rp {0:N0}", number);
+        }
+
+        private void DataReservasi_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.ColumnIndex == 6 && e.Value != null)
+            {
+                if (int.TryParse(e.Value.ToString(), out int number))
+                {
+                    e.Value = FormatDigitAngka(number);
+                    e.FormattingApplied = true;
+                }
+            }
+
+            if (e.ColumnIndex == 9 && e.Value != null)
+            {
+                if (int.TryParse(e.Value.ToString(), out int number))
+                {
+                    e.Value = FormatDigitAngka(number);
+                    e.FormattingApplied = true;
+                }
+            }
         }
     }
 }

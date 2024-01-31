@@ -171,5 +171,35 @@ namespace TB_714220013_714220048.view
             Tampil();
             GetDataKamar();
         }
+
+        private void FormatDigit(TextBox textBox)
+        {
+            if (!string.IsNullOrEmpty(textBox.Text) && textBox.Text.All(char.IsDigit))
+            {
+                string number = textBox.Text.Replace(".", "");
+
+                number = string.Format("{0:#,##0}", double.Parse(number));
+
+                textBox.Text = number;
+                textBox.SelectionStart = textBox.Text.Length;
+            }
+        }
+
+        private string FormatDigitAngka(int number)
+        {
+            return string.Format("Rp {0:N0}", number);
+        }
+ 
+        private void DataKamar_CellFormatting_1(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.ColumnIndex == 4 && e.Value != null)
+            {
+                if (int.TryParse(e.Value.ToString(), out int number))
+                {
+                    e.Value = FormatDigitAngka(number);
+                    e.FormattingApplied = true;
+                }
+            }
+        }
     }
 }

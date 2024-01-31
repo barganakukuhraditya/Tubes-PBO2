@@ -41,27 +41,27 @@
             this.btnUbah = new System.Windows.Forms.Button();
             this.btnSimpan = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dateCheckout = new System.Windows.Forms.DateTimePicker();
-            this.dateCheckin = new System.Windows.Forms.DateTimePicker();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.tbHarga = new System.Windows.Forms.TextBox();
             this.tbNOHP = new System.Windows.Forms.TextBox();
             this.tbEmail = new System.Windows.Forms.TextBox();
             this.tbNama = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.tbTipe = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cbKamar = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dateCheckout = new System.Windows.Forms.DateTimePicker();
+            this.dateCheckin = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.cbKamar = new System.Windows.Forms.ComboBox();
-            this.tbTipe = new System.Windows.Forms.TextBox();
-            this.tbTotal = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.tbHarga = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.tbTotal = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataReservasi)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -90,6 +90,7 @@
             this.DataReservasi.Size = new System.Drawing.Size(765, 214);
             this.DataReservasi.TabIndex = 0;
             this.DataReservasi.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataReservasi_CellClick);
+            this.DataReservasi.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.DataReservasi_CellFormatting);
             // 
             // groupBox3
             // 
@@ -210,28 +211,30 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Form Input Reservasi";
             // 
-            // dateCheckout
+            // label12
             // 
-            this.dateCheckout.Checked = false;
-            this.dateCheckout.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateCheckout.Location = new System.Drawing.Point(107, 51);
-            this.dateCheckout.MaxDate = new System.DateTime(2025, 12, 12, 0, 0, 0, 0);
-            this.dateCheckout.MinDate = new System.DateTime(2024, 1, 1, 0, 0, 0, 0);
-            this.dateCheckout.Name = "dateCheckout";
-            this.dateCheckout.Size = new System.Drawing.Size(106, 20);
-            this.dateCheckout.TabIndex = 11;
-            this.dateCheckout.Value = new System.DateTime(2024, 1, 10, 0, 0, 0, 0);
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(258, 129);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(24, 13);
+            this.label12.TabIndex = 20;
+            this.label12.Text = "Rp.";
             // 
-            // dateCheckin
+            // label11
             // 
-            this.dateCheckin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateCheckin.Location = new System.Drawing.Point(107, 19);
-            this.dateCheckin.MaxDate = new System.DateTime(2025, 12, 12, 0, 0, 0, 0);
-            this.dateCheckin.MinDate = new System.DateTime(2024, 1, 1, 0, 0, 0, 0);
-            this.dateCheckin.Name = "dateCheckin";
-            this.dateCheckin.Size = new System.Drawing.Size(106, 20);
-            this.dateCheckin.TabIndex = 10;
-            this.dateCheckin.Value = new System.DateTime(2024, 1, 10, 0, 0, 0, 0);
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(209, 129);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(36, 13);
+            this.label11.TabIndex = 19;
+            this.label11.Text = "Harga";
+            // 
+            // tbHarga
+            // 
+            this.tbHarga.Location = new System.Drawing.Point(283, 126);
+            this.tbHarga.Name = "tbHarga";
+            this.tbHarga.Size = new System.Drawing.Size(100, 20);
+            this.tbHarga.TabIndex = 18;
             // 
             // tbNOHP
             // 
@@ -254,6 +257,91 @@
             this.tbNama.Size = new System.Drawing.Size(276, 20);
             this.tbNama.TabIndex = 6;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(7, 94);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(39, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "No HP";
+            // 
+            // tbTipe
+            // 
+            this.tbTipe.Location = new System.Drawing.Point(107, 160);
+            this.tbTipe.Name = "tbTipe";
+            this.tbTipe.Size = new System.Drawing.Size(180, 20);
+            this.tbTipe.TabIndex = 17;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(7, 59);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(32, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Email";
+            // 
+            // cbKamar
+            // 
+            this.cbKamar.FormattingEnabled = true;
+            this.cbKamar.Location = new System.Drawing.Point(107, 126);
+            this.cbKamar.Name = "cbKamar";
+            this.cbKamar.Size = new System.Drawing.Size(81, 21);
+            this.cbKamar.TabIndex = 16;
+            this.cbKamar.SelectedIndexChanged += new System.EventHandler(this.cbKamar_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(7, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Nama";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(5, 129);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(37, 13);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "Kamar";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 163);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(61, 13);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "Tipe Kamar";
+            // 
+            // dateCheckout
+            // 
+            this.dateCheckout.Checked = false;
+            this.dateCheckout.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateCheckout.Location = new System.Drawing.Point(107, 51);
+            this.dateCheckout.MaxDate = new System.DateTime(2025, 12, 12, 0, 0, 0, 0);
+            this.dateCheckout.MinDate = new System.DateTime(2024, 1, 1, 0, 0, 0, 0);
+            this.dateCheckout.Name = "dateCheckout";
+            this.dateCheckout.Size = new System.Drawing.Size(106, 20);
+            this.dateCheckout.TabIndex = 11;
+            this.dateCheckout.Value = new System.DateTime(2024, 1, 10, 0, 0, 0, 0);
+            this.dateCheckout.ValueChanged += new System.EventHandler(this.dateCheckout_ValueChanged);
+            // 
+            // dateCheckin
+            // 
+            this.dateCheckin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateCheckin.Location = new System.Drawing.Point(107, 19);
+            this.dateCheckin.MaxDate = new System.DateTime(2025, 12, 12, 0, 0, 0, 0);
+            this.dateCheckin.MinDate = new System.DateTime(2024, 1, 1, 0, 0, 0, 0);
+            this.dateCheckin.Name = "dateCheckin";
+            this.dateCheckin.Size = new System.Drawing.Size(106, 20);
+            this.dateCheckin.TabIndex = 10;
+            this.dateCheckin.Value = new System.DateTime(2024, 1, 10, 0, 0, 0, 0);
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -272,33 +360,6 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "Check IN";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(7, 94);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(39, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "No HP";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(7, 59);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(32, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Email";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nama";
-            // 
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.dateCheckout);
@@ -314,56 +375,6 @@
             this.groupBox5.TabIndex = 12;
             this.groupBox5.TabStop = false;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 163);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 13);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "Tipe Kamar";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(5, 129);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(37, 13);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "Kamar";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(7, 86);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(31, 13);
-            this.label9.TabIndex = 15;
-            this.label9.Text = "Total";
-            // 
-            // cbKamar
-            // 
-            this.cbKamar.FormattingEnabled = true;
-            this.cbKamar.Location = new System.Drawing.Point(107, 126);
-            this.cbKamar.Name = "cbKamar";
-            this.cbKamar.Size = new System.Drawing.Size(81, 21);
-            this.cbKamar.TabIndex = 16;
-            this.cbKamar.SelectedIndexChanged += new System.EventHandler(this.cbKamar_SelectedIndexChanged);
-            // 
-            // tbTipe
-            // 
-            this.tbTipe.Location = new System.Drawing.Point(107, 160);
-            this.tbTipe.Name = "tbTipe";
-            this.tbTipe.Size = new System.Drawing.Size(180, 20);
-            this.tbTipe.TabIndex = 17;
-            // 
-            // tbTotal
-            // 
-            this.tbTotal.Location = new System.Drawing.Point(107, 83);
-            this.tbTotal.Name = "tbTotal";
-            this.tbTotal.Size = new System.Drawing.Size(168, 20);
-            this.tbTotal.TabIndex = 18;
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -373,30 +384,21 @@
             this.label10.TabIndex = 19;
             this.label10.Text = "Rp.";
             // 
-            // tbHarga
+            // tbTotal
             // 
-            this.tbHarga.Location = new System.Drawing.Point(283, 126);
-            this.tbHarga.Name = "tbHarga";
-            this.tbHarga.Size = new System.Drawing.Size(100, 20);
-            this.tbHarga.TabIndex = 18;
+            this.tbTotal.Location = new System.Drawing.Point(107, 83);
+            this.tbTotal.Name = "tbTotal";
+            this.tbTotal.Size = new System.Drawing.Size(168, 20);
+            this.tbTotal.TabIndex = 18;
             // 
-            // label11
+            // label9
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(209, 129);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(36, 13);
-            this.label11.TabIndex = 19;
-            this.label11.Text = "Harga";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(258, 129);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(24, 13);
-            this.label12.TabIndex = 20;
-            this.label12.Text = "Rp.";
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(7, 86);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(31, 13);
+            this.label9.TabIndex = 15;
+            this.label9.Text = "Total";
             // 
             // FormReservasi
             // 

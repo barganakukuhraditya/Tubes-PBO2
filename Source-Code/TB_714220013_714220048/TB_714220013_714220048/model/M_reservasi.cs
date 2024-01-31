@@ -15,7 +15,7 @@ namespace TB_714220013_714220048.model
         {
         }
 
-        public M_reservasi(string id_customer, string nama, string email, string nohp, string tipe_kamar, string checkin, string checkout, string harga)
+        public M_reservasi(string id_customer, string nama, string email, string nohp, string tipe_kamar, string checkin, string checkout, string total)
         {
             this.ID = id_customer;
             this.Nama = nama;
