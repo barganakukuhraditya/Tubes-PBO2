@@ -113,6 +113,7 @@ namespace TB_714220013_714220048
                 m_rsv.Nohp = tbNOHP.Text;
                 m_rsv.Checkin = dateCheckin.Text;
                 m_rsv.Checkout = dateCheckout.Text;
+                m_rsv.Total = tbTotal.Text;
 
                 reservasi.Insert(m_rsv);
 

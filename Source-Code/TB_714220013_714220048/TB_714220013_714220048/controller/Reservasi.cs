@@ -19,8 +19,8 @@ namespace TB_714220013_714220048.controller
             try
             {
                 koneksi.OpenConnection();
-                koneksi.ExecuteQuery("INSERT INTO t_reservasi (id_customer, nama, email, nohp, checkin, checkout) VALUES('" + reservasi.ID + "','" + reservasi.Nama + "','" + 
-                    reservasi.Email + "','" + reservasi.Nohp + "','" + reservasi.Checkin + "','" + reservasi.Checkout + "')");
+                koneksi.ExecuteQuery("INSERT INTO t_reservasi (id_customer, nama, email, nohp, checkin, checkout, total) VALUES('" + reservasi.ID + "','" + reservasi.Nama + "','" + 
+                    reservasi.Email + "','" + reservasi.Nohp + "','" + reservasi.Checkin + "','" + reservasi.Checkout + "','" + reservasi.Total + "')");
                 status = true;
                 MessageBox.Show("Data berhasil ditambahkan", "Informasi",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
